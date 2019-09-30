@@ -1,11 +1,13 @@
 require("dotenv").congig();
 
 var keys = require("./keys.js");
+
 var spotify = new spotify(keys.spotify);
 
 var getArtistsNames = function(artist) {
     return artist.name;
 }
+
 var getMeSpotify = function(songName) {
 
     spotify.search({ type: 'track', query: songName }, function(err, data) {
@@ -14,7 +16,7 @@ var getMeSpotify = function(songName) {
             return;
         }
     
-    var songs = data.tracks.tems;
+    var songs = data.tracks.items;
     for(var i=0, i<songs.length; i++) {
         console.log(i);
         console.log('artist(s): ' + songs[i].artists.map(
