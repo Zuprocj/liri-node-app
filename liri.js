@@ -1,4 +1,4 @@
-require("dotenv").congig();
+require("dotenv").config();
 
 let request = require("request");
 
