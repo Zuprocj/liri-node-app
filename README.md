@@ -1,8 +1,27 @@
-# liri-node-app
-1. Clearly state the problem the app is trying to solve (i.e. what is it doing and why)
-2. Give a high-level overview of how the app is organized
-3. Give start-to-finish instructions on how to run the app
-4. Include screenshots, gifs or videos of the app functioning
-5. Contain a link to a deployed version of the app
-6. Clearly list the technologies used in the app
-7. State your role in the app development
+# Liri-node-app
+
+ LIRI is like iPhone's SIRI. However, while SIRI is a Speech Interpretation and Recognition Interface, LIRI is a _Language_ Interpretation and Recognition Interface. LIRI will be a command line node app that takes in parameters and gives you back data.
+
+ | Command | Function |
+ | --- | --- |
+ | concert-this | uses the bandsintown API to take a band name from the user and returns that bands next concert |
+ | spotify-this | uses the spotify API to take a song name from the user and returns the artist, song name, spotify-link and album |
+ | movie-this | uses the OMDB API to take a movie title and returns the name, casr, release year, IMDB and Rotten Tomatoes rating, country of origin, language, and plot |
+ | do-what-it-says | uses the bulit in readFile method to access data from a prefilled  .txt file and return its information as a command/search query |
+
+**Before you begin, make sure you have these node packages installed**
+
+1. **Dotenv** Dotenv is a modile that loads enviroment variables from a .env file into process.env
+_'npm install dotenv'_
+2. **Request** Request is desgined to make http calls 
+_'npm install request'_
+3. **Moment** Javascipt library fpr parsing, validating, manipulating, and formatting dates.
+_'npm install moment'_
+4. **FS** a built in node package
+_'npm i request'_
+
+## Functions
+
+**concert-this**
+_<command, artist name>_
+Function takes the userInput (command) and the userQuery(artist), and returns the next concert tie and date for that artist, as well as location and city.

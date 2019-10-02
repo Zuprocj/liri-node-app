@@ -82,7 +82,7 @@ function movieThis() {
     if (!userQuery) {
         userQuery = "mr nobody";
     };
-    request("http://www.omdbapi.com/?t=" + userQuery + "&apikey=86fe999c", function (error, response, body) {
+    request("http://www.omdbapi.com/?t=" + userQuery + "&apikey=trilogy", function (error, response, body) {
         let userMovie = JSON.parse(body);
         let ratingsArr = userMovie.Ratings;
         if (ratingsArr.length > 2) {}
