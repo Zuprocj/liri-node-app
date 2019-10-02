@@ -1,8 +1,21 @@
 require("dotenv").congig();
 
+let request = require("request");
+
+const moment = require('moment');
+
+const fs = require("fs");
+
 var keys = require("./keys.js");
 
-var spotify = new spotify(keys.spotify);
+const Spotify = require("node-spotify-api");
+const spotify = new Spotify(keys.spotify);
+
+let omdb = (keys.omdb);
+let bandsintown = (keys.bandsintown);
+
+let userInput = process.argv[2];
+let userQuery = process.argv.slice(3).join(" ");
 
 var getArtistsNames = function(artist) {
     return artist.name;
