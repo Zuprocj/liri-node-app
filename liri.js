@@ -17,27 +17,45 @@ let bandsintown = (keys.bandsintown);
 let userInput = process.argv[2];
 let userQuery = process.argv.slice(3).join(" ");
 
-var getArtistsNames = function(artist) {
-    return artist.name;
+function userCommand(userInput, userQuery) {
+    switch (userInput) {
+        case "concert-this":
+            concertThis();
+            break;
+        case "spotify-this":
+            spotifyThisSong();
+            break;
+        case "movie-this":
+            movieThis();
+            break;
+        case "do-this":
+            doThis(userQuery);
+            break;
+        default:
+            console.log("I don't understand");
+            break;
+    }
 }
 
-var getMeSpotify = function(songName) {
+function spotifyThisSong() {
+    console.log(`\n - - - - -\n\nSEARCHING FOR..."${userQuery}"`);
+
+    // IF USER QUERY NOT FOUND, PASS VALUE OF "ACE OF BASE" 
+    if (!userQuery) {
+        userQuery = "the sign ace of base"
+    };
 
     spotify.search({ type: 'track', query: songName }, function(err, data) {
         if ( err ) {
             console.log('Error occured: ' + err);
             return;
         }
-    
-    var songs = data.tracks.items;
-    for(var i=0, i<songs.length; i++) {
-        console.log(i);
-        console.log('artist(s): ' + songs[i].artists.map(
-            getArtistsNames));
-        console.log('song name: ' + songs[i].name);
-        console.log('preview song: ' + songs[i].preview.url);
-        console.log('album: ' + songs[i].album.name);
-        console.log ('------------------------------------');
-    }
-    });
+      
+      let spotifyArr = data.tracks.items;
+
+      for (i = 0; i < spotifyArr.length; i++) {
+          console.log(`\nIs this is what you are looking for
+          ...\n\nArtist: ${data.tracks.items[i].album.artists[0].name} \nSong: ${data.tracks.items[i].name}\nAlbum: ${data.tracks.items[i].album.name}\nSpotify link: ${data.tracks.items[i].external_urls.spotify}\n\n - - - - -`)
+      };
+  });
 }
