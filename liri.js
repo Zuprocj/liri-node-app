@@ -64,7 +64,7 @@ function spotifyThisSong() {
     if (!userQuery) {
         userQuery = "the sign ace of base"
     };
-    spotify.search({ type: 'track', query: songName }, function(err, data) {
+    spotify.search({ type: 'track', query: userQuery}, function(err, data) {
         if ( err ) {
             console.log('Error occured: ' + err);
             return;
