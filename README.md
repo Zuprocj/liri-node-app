@@ -26,6 +26,7 @@ _'npm i request'_
 _<command, artist name>_
 Function takes the userInput (command) and the userQuery (artist), and returns the next concert time and date for that artist, as well as location and city. 
 ![image of concert-this](.\images\concert-this.png)
+
 **spotify-this**
 _<command, song name>_
 Function takes the userInput (command) and the userQuery (song name), and returns the artist, full track name, a preview link and the album.
@@ -35,6 +36,7 @@ Function takes the userInput (command) and the userQuery (song name), and return
 _<command, movie name>_
 Function takes the userInput( command) and the userQuery (movie name), and returns title, cast, release date, ratings, country of origin, original languages, and synopsis.
 ![image of movie-this}](.\images\movie-this.png)
+
 **do-this**
 _<command>_
 Function that will randomly select from the random.txt commands to run. 
