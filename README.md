@@ -24,20 +24,24 @@ _'npm i request'_
 
 **concert-this**
 _<command, artist name>_
+
 Function takes the userInput (command) and the userQuery (artist), and returns the next concert time and date for that artist, as well as location and city. 
 ![image of concert-this](https://user-images.githubusercontent.com/50551420/66095636-1a6b6880-e54d-11e9-9fab-976e1acd3106.png)
 
 **spotify-this**
 _<command, song name>_
+
 Function takes the userInput (command) and the userQuery (song name), and returns the artist, full track name, a preview link and the album.
-![image of spotify-this}](.\images\spotify-this.png)
+![image of spotify-this}](https://user-images.githubusercontent.com/50551420/66095771-a2ea0900-e54d-11e9-8cc5-f5b9fe14d3a9.png)
 
 **movie-this**
 _<command, movie name>_
+
 Function takes the userInput( command) and the userQuery (movie name), and returns title, cast, release date, ratings, country of origin, original languages, and synopsis.
-![image of movie-this}](.\images\movie-this.png)
+![image of movie-this}](https://user-images.githubusercontent.com/50551420/66095763-9a91ce00-e54d-11e9-9a68-a70ba83bed34.png)
 
 **do-this**
 _<command>_
+
 Function that will randomly select from the random.txt commands to run. 
-![image of do-this}](.\images\do-this.png)
+![image of do-this}](https://user-images.githubusercontent.com/50551420/66095756-92399300-e54d-11e9-8735-08d6b83377fd.png)
