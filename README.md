@@ -19,6 +19,7 @@ _'npm install request'_
 _'npm install moment'_
 4. **FS** a built in node package
 _'npm i request'_
+5. **.env** User must create their own .env file to house api keys and to keep them private on their own computers.
 
 ## Functions
 
@@ -45,3 +46,13 @@ _<command>_
 
 Function that will randomly select from the random.txt commands to run. 
 ![image of do-this}](https://user-images.githubusercontent.com/50551420/66095756-92399300-e54d-11e9-8735-08d6b83377fd.png)
+
+## Technologies used 
+ VsCode
+ Node.js
+ Axios
+ Node-Spotify-API
+ OMDB API
+ Bands In Town API
+ Moment
+ DotEnv
