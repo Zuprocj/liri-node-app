@@ -87,3 +87,22 @@ function doThis() {
         userCommand(userInput, userQuery);
     });
 };
+
+function concertThis() {
+    console.log(`\n - - - - -\n\nSEARCHING FOR...${userQuery}'s next show...`);
+    request("https://rest.bandsintown.com/artists/" + userQuery + "/events?app_id=" + bandsintown, function (error, response, body) {
+        if (!error && response.statusCode === 200) {
+            let userBand = JSON.parse(body);
+            if (userBand.length > 0) {
+                for (i = 0; i < 1; i++) {
+                    console.log(`\nIs this is what you are looking for...\n\nArtist: ${userBand[i].lineup[0]} \nVenue: ${userBand[i].venue.name}
+                    \nVenue Location: ${userBand[i].venue.latitude},${userBand[i].venue.longitude}\nVenue City: ${userBand[i].venue.city}, ${userBand[i].venue.country}`)
+                    let concertDate = moment(userBand[i].datetime).format("MM/DD/YYYY hh:00 A");
+                    console.log(`Date and Time: ${concertDate}\n\n- - - - -`);
+                };
+            } else {
+                console.log('Band or concert not found!');
+            };
+        };
+    });
+};
