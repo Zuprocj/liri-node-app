@@ -25,7 +25,7 @@ _'npm i request'_
 **concert-this**
 _<command, artist name>_
 Function takes the userInput (command) and the userQuery (artist), and returns the next concert time and date for that artist, as well as location and city. 
-![image of concert-this]("https://user-images.githubusercontent.com/50551420/66095636-1a6b6880-e54d-11e9-9fab-976e1acd3106.png")
+![image of concert-this](https://user-images.githubusercontent.com/50551420/66095636-1a6b6880-e54d-11e9-9fab-976e1acd3106.png)
 
 **spotify-this**
 _<command, song name>_
